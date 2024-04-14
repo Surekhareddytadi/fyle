@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.outer-container {
+  /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  /* Adjust this width as needed */
+}
+
+.top-bar {
+  background-color: #8d9cb0;
+  /* border-bottom: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px 8px 0 0; */
+  position: relative;
+  margin-bottom: 100px;
+  opacity: 0.8;
+  height: 30px;
+  display: flex;
+}
+
+.circle-container {
+  width: max-content;
+  align-self: center;
+  margin-left: 10px;
+}
+
+.color-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.container {
+  width: 500px;
+  margin: 5px auto;
+  padding: 90px 40px 0px 40px;
+  background-color: #f4f4f4;
+  border: 1px solid grey;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 200px;
+}
+
+.help {
+  margin-left: 2px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  height: max-content;
+  width: max-content;
+  font-size: smaller;
+  opacity: 0.8;
+  background-color: #263643;
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext1 {
+  visibility: hidden;
+  height: 30px;
+  width: 180px;
+  font-size: smaller;
+  font-weight: bolder;
+  opacity: 0.8;
+  background-color: #263643;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+}
+
+.tooltip .tooltiptext1::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext1 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+form {
+  display: grid;
+  /* gap: 10px; */
+}
+
+label {
+  font-size: smaller;
+  font-weight: bolder;
+  opacity: 0.8;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 30px 0px 30px 0px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.income_container {
+  position: relative;
+}
+
+.income_container .error-symbol {
+  position: absolute;
+  display: none;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff4d4d;
+}
+
+.error-icon.visible {
+  display: inline-block;
+  position: relative;
+  top: 6px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  /*left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; */
+  width: 620px;
+  margin: 5px auto;
+  height: 350px;
+  padding: 90px 40px 40px 40px;
+  background-color: #f4f4f4;
+  border: 1px solid grey;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.modal-content {
+  /* margin: 15% auto; */
+  padding: 20px;
+  border-radius: 5px;
+  height: 100%;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  font-size: 12px;
+  cursor: pointer;
+  width: max-content;
+  background-color: #007bff;
+  color: white;
+  margin-top: 35px;
+  padding: 5px 10px 5px 10px;
+}
+
+.close:hover {
+  color: #999;
+}
